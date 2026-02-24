@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Website - SPU Workshop 6</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MY WEBSITE</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#cards">Content</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
+            <p>สัมผัสประสบการณ์การใช้งานเว็บไซต์ที่ลื่นไหลและสวยงามในทุกอุปกรณ์</p>
+            <a href="#cards" class="cta-btn">เริ่มต้นใช้งาน</a>
+        </div>
+    </header>
+
+    <section class="info-section">
+        <h2>ทำไมต้องเลือกเรา?</h2>
+        <p>นี่คือตัวอย่างการใช้งานแท็ก h2 และ p พร้อมฟอนต์ IBM Plex Sans Thai ตามที่ Workshop กำหนด เว็บไซต์นี้ถูกออกแบบมาให้รองรับการแสดงผลทุกหน้าจอ ไม่ว่าจะเป็นมือถือ แท็บเล็ต หรือคอมพิวเตอร์</p>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">แกลเลอรีรูปภาพ</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://picsum.photos/id/10/600/400" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/id/11/600/400" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/id/12/600/400" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/id/13/600/400" alt="Gallery 4"></div>
+        </div>
+    </section>
+
+    <section id="cards" class="cards-section">
+        <h2 class="section-title">เนื้อหาที่น่าสนใจ</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="https://picsum.photos/id/20/400/250" alt="Card 1">
+                <div class="card-body">
+                    <h3>บริการของเรา 1</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับบริการที่หนึ่ง เพื่อดึงดูดความสนใจของผู้เข้าชม</p>
+                    <button class="card-btn">อ่านต่อ</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/21/400/250" alt="Card 2">
+                <div class="card-body">
+                    <h3>บริการของเรา 2</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับบริการที่สอง เพื่อดึงดูดความสนใจของผู้เข้าชม</p>
+                    <button class="card-btn">อ่านต่อ</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/22/400/250" alt="Card 3">
+                <div class="card-body">
+                    <h3>บริการของเรา 3</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับบริการที่สาม เพื่อดึงดูดความสนใจของผู้เข้าชม</p>
+                    <button class="card-btn">อ่านต่อ</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/id/23/400/250" alt="Card 4">
+                <div class="card-body">
+                    <h3>บริการของเรา 4</h3>
+                    <p>คำอธิบายสั้นๆ เกี่ยวกับบริการที่สี่ เพื่อดึงดูดความสนใจของผู้เข้าชม</p>
+                    <button class="card-btn">อ่านต่อ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>ICT12267 Web Development</strong></p>
+            <p>&copy; 2024 Sripatum University. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" title="กลับขึ้นด้านบน">↑</button>
+
+    <script>
+        // ฟังก์ชันสำหรับปุ่ม Back to Top
+        const topBtn = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+        topBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html>
